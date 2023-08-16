@@ -1,16 +1,27 @@
-import React from 'react'
-import styled from 'styled-components';
+import React from "react";
+import { NavLink } from "react-router-dom";
+import styled from "styled-components";
 
 const Header = () => {
   return (
-    <StyledHeader>Header</StyledHeader>
-  )
-}
+    <StyledHeader>
+      <nav>
+        <ul>
+          <li>
+            <NavLink to="/generator">Generator</NavLink>
+          </li>
+          <li>
+            <NavLink to="/favorites">Favorites</NavLink>
+          </li>
+        </ul>
+      </nav>
+    </StyledHeader>
+  );
+};
 
 export default Header;
 
-
-export const StyledHeader = styled.header.attrs({ className: 'header' })`
+export const StyledHeader = styled.header.attrs({ className: "header" })`
   /* position: fixed;
   z-index: 2; */
   background-color: lightblue;
