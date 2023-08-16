@@ -6,14 +6,14 @@ const Header = () => {
   return (
     <StyledHeader>
       <nav>
-        <ul>
+        <LinksUl>
           <li>
             <NavLink to="/generator">Generator</NavLink>
           </li>
           <li>
             <NavLink to="/favorites">Favorites</NavLink>
           </li>
-        </ul>
+        </LinksUl>
       </nav>
     </StyledHeader>
   );
@@ -22,8 +22,6 @@ const Header = () => {
 export default Header;
 
 export const StyledHeader = styled.header.attrs({ className: "header" })`
-  /* position: fixed;
-  z-index: 2; */
   background-color: lightblue;
   border-bottom: 1px solid #e4e9e9;
   width: 100%;
@@ -32,4 +30,8 @@ export const StyledHeader = styled.header.attrs({ className: "header" })`
   align-items: center;
   justify-content: space-between;
   padding: 0 32px 0 24.42px;
+`;
+export const LinksUl = styled.ul.attrs({ className: "links" })`
+  display: flex;
+  gap: 10px;
 `;
